@@ -15,6 +15,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 
 
+import android.speech.tts.TextToSpeech;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,8 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 import org.json.JSONObject;
+
+import java.util.Locale;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -37,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
     final long MIN_TIME = 5000;
     final float MIN_DISTANCE = 1000;
     final int REQUEST_CODE = 101;
+    TextToSpeech toSpeech;
+
 
 
     String Location_Provider = LocationManager.GPS_PROVIDER;
@@ -59,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
         weatherState = findViewById(R.id.weatherCondition);
         Temperature = findViewById(R.id.temperature);
         NameofCity = findViewById(R.id.cityName);
+
+
+
+
 
 
 
@@ -191,6 +200,11 @@ public class MainActivity extends AppCompatActivity {
         Temperature.setText(weather.getmTemperature());
         NameofCity.setText(weather.getMcity());
         weatherState.setText(weather.getmWeatherType());
+
+
+
+
+
 
 
 

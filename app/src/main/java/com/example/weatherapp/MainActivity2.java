@@ -5,7 +5,7 @@ import org.json.JSONObject;
 
 public class MainActivity2 {
 
-    private String mTemperature,mcity,mWeatherType;
+    private String mTemperature,mcity,mWeatherType,mpressure,mhumidity;
     private int mCondition;
 
     public static MainActivity2 fromJson(JSONObject jsonObject)
